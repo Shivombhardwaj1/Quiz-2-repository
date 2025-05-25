@@ -31,6 +31,34 @@ Search attendance by employee name:
 Filter performance by month:
 /api/performance/?month=May 2023
 
+============================================================for attendance ==========================================================
+You can now test like this:
+
+ Pagination
+GET http://localhost:8000/api/attendance/?page=2
+ 
+ Filter (e.g., Present status)
+GET http://localhost:8000/api/attendance/?status=Present
+
+ Search (e.g., search by employee first name)
+GET http://localhost:8000/api/attendance/?search=John
+
+ Combined
+GET http://localhost:8000/api/attendance/?status=Present&search=John&page=1
+
+===========================================================to post request of attendance=================================================
+POST Request to Mark Attendance
+
+use POST /api/attendance/ 
+
+with the following JSON body:
+example-
+{
+  "employee": 1,            
+  "date": "2025-05-26",     
+  "status": "Present"      
+}
+
 -----------------------------------------------------## Setup Instructions-------------------------------------------------------
 
 1. Clone the repo:
